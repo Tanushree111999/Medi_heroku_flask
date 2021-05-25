@@ -46,6 +46,10 @@ def clean_text(raw_phrase):
     joined_words = ( " ".join( stemmed_words ))
     return joined_words
 
+@app.route('/')
+def home():
+	return "Welcome"
+
 @app.route('/predict',methods=['POST'])
 def predict():
 	
